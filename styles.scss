@@ -60,6 +60,18 @@ body {
   }
 }
 
+// Ensure image responsiveness and avoid overlap on small screens
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#product img {
+  margin-bottom: 20px;
+}
+
 // About Section
 #about {
   background-color: $secondary-color;
@@ -99,6 +111,12 @@ body {
     p {
       font-size: 1.1rem;
     }
+  }
+
+  img {
+    max-width: 80%; // Adjusted for mobile-friendly display
+    height: auto;
+    margin-bottom: 15px;
   }
 }
 
@@ -141,6 +159,8 @@ body {
 
     .card-img-top {
       border-radius: 5px;
+      max-width: 100%; // Ensure images fit within the card
+      height: auto;
     }
 
     .card-body {
@@ -217,5 +237,32 @@ body {
         background-color: darken($accent-color, 10%);
       }
     }
+  }
+}
+
+// Media Queries for Mobile View (below 768px)
+@media (max-width: 768px) {
+  .product-title {
+    font-size: 1.6rem;
+  }
+
+  .price {
+    font-size: 1.3rem;
+  }
+
+  .product-features li {
+    font-size: 1rem;
+  }
+
+  #features h4 {
+    font-size: 1.2rem;
+  }
+
+  #reviews h2,
+  #features h2,
+  #about h2,
+  #related-products h2,
+  #contact h2 {
+    font-size: 1.8rem;
   }
 }
